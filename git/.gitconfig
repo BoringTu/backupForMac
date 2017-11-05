@@ -1,0 +1,25 @@
+[filter "lfs"]
+	required = true
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	clean = git-lfs clean -- %f
+[user]
+	name = BoringTu
+	email = lar_rabbit@qq.com
+[core]
+	excludesfile = /Users/Andy/.gitignore_global
+	editor = vim
+	ignorecase = false
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+[http]
+	proxy = 
+	postBuffer = 524288000
+[https]
+	proxy = 
