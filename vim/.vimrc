@@ -41,6 +41,7 @@ set nobackup
 au BufNewFile,BufRead *.tpl set filetype=html
 au BufNewFile,BufRead *.hbs set filetype=html
 au BufNewFile,BufRead *.handlebars set filetype=html
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " n	常规模式
 " v	可视化模式

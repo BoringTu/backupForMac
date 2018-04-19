@@ -7,7 +7,7 @@
 	name = BoringTu
 	email = lar_rabbit@qq.com
 [core]
-	excludesfile = /Users/Andy/.gitignore_global
+	excludesfile = /Users/boringtu/.gitignore_global
 	editor = vim
 	ignorecase = false
 [push]

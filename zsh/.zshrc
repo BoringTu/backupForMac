@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Andy/.oh-my-zsh
+export ZSH=/Users/boringtu/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 plugins=(autojump)
 
-export PATH=$HOME/bin:/lee/local/bin:$PATH
+export PATH=$HOME/bin:/Users/boringtu/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,7 +87,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim='/lee/local/bin/vim'
+export GREP_OPTIONS='--color=always' GREP_COLOR='1;33'
+#export GREP_OPTIONS='--color=always' GREP_COLORS='mt=01;33:ms=01;33:mc=01;33:sl=:cx=:fn=35:ln=33:bn=32:se=36'
+
+alias vim='/Users/boringtu/local/bin/vim'
 #alias vim='/Applications/MacVim.app/Contents/MacOS/mvim'
 #alias vi=vim
 alias diff=vimdiff
