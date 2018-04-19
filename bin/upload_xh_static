@@ -1,0 +1,27 @@
+#!/bin/sh
+
+path=$3
+if [ $1 == "test" ]
+then
+	if [ $2 == "pc" ]
+	then
+		targetpath="testweb"
+	elif [ $2 == "mb" ]
+	then
+		targetpath="testwebmb"
+	fi
+elif [ $1 == "pvw" ]
+then
+	if [ $2 == "pc" ]
+	then
+		targetpath="pvwweb"
+	elif [ $2 == "mb" ]
+	then
+		targetpath="pvwwebmb"
+	fi
+fi
+echo "Target pathname: "$targetpath
+echo "File path: "$path
+rsync -vzrtopg --delete --progress --password-file=/etc/rsyncd.secrets $path root@203.78.143.196::$targetpath
+echo "All Files transfer complete."
+

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+###
+ # @Author: BoringTu
+ # @Emaill: work@BoringTu.com
+###
+
+# 待搜索字段
+if [ $1 ]
+then
+	str=$1
+else
+	echo "请输入搜索内容："
+	read str
+fi
+# 目标目录 默认 ./
+echo "请输入目标目录（默认 当前目录）："
+read targetDir
+if [ ! $targetDir ]
+then
+	targetDir="."
+fi
+# grep 参数
+echo "请输入 grep 参数（默认 -r）："
+read grepParam
+if [ ! $grepParam ]
+then
+	grepParam="-r"
+fi
+
+find $targetDir | xargs grep -n --context=1 $grepParam $str
+

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ $1 == "test" ]
+then
+	ipAdd="203.78.143.193"
+	targetPath="nodejs"
+elif [ $1 == "pvw" ]
+then
+	ipAdd="203.78.143.196"
+	targetPath="xhnode"
+fi
+
+rsync -vzrtopg --delete --progress --exclude-from=$HOME/exclude_xhserver.list --password-file=/etc/rsyncd.secrets `pwd` root@$ipAdd::$targetPath
+echo "All Files transfer complete."
+
